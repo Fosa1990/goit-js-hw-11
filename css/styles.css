@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900');
+
+:root {
+  --font: 'Lato', sans-serif;
+  --big: 'Montserrat', sans-serif;
+
+  --red: #ef2f3c;
+  --white: #f6f4f3;
+  --blue: #276fbf;
+  --dark: #183059;
+  --yellow: #f0a202;
+}
+
+body {
+  background: var(--dark);
+}
+
+.navigation {
+  width: 800px;
+
+  padding: 1em;
+  background-color: var(--dark);
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+}
+
+.navigation a {
+  display: inline-block;
+
+  margin-top: 2em;
+  font-family: var(--font);
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: var(--white);
+
+  text-decoration: none;
+}
+
+.navigation a:hover,
+.navigation a.current.refresh:hover {
+  color: var(--yellow);
+}
+
+.navigation a.current {
+  pointer-events: none;
+  cursor: default;
+
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.navigation a.current.refresh {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+/*  Color Switcher styles  */
+.color-button {
+  padding: 20px;
+
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  background-color: var(--dark);
+
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+}
+
+.color-display {
+  padding: 10px;
+  max-height: 50px;
+  max-width: 600px;
+
+  font-family: var(--big);
+  font-weight: 700;
+  color: var(--blue);
+  background-color: var(--dark);
+
+  border-radius: 10px;
+
+  outline: 1px solid var(--yellow);
+}
+
+.disabled {
+  color: var(--red);
+  background-color: var(--dark);
+}
+
+/*  Timer styles  */
+.timer-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 650px;
+  height: 480px;
+}
+
+.timer-title {
+  font-family: var(--font);
+  text-align: center;
+  margin-top: 2em;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--white);
+}
+
+#timer-1 {
+  color: var(--white);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font);
+  font-size: 0.7em;
+  letter-spacing: 5px;
+  margin-top: 25%;
+}
+
+.timer .field {
+  display: inline-block;
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.timer .field:nth-child(1) {
+  background: var(--red);
+}
+
+.timer .field:nth-child(2) {
+  background: var(--white);
+  color: var(--dark);
+}
+
+.timer .field:nth-child(3) {
+  background: var(--blue);
+}
+
+.timer .field:nth-child(4) {
+  background: var(--yellow);
+}
+
+.field [data-value='days'],
+.field [data-value='hours'],
+.field [data-value='mins'],
+.field [data-value='secs'] {
+  font-family: var(--big);
+  color: var(--dark);
+  font-size: 4em;
+}

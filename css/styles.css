@@ -24,10 +24,20 @@ body {
   border-radius: 10px;
 }
 
+.navigation li {
+  list-style: circle;
+  color: var(--blue);
+}
+
+.navigation li:hover {
+  list-style: disc;
+  color: var(--yellow);
+}
+
 .navigation a {
   display: inline-block;
 
-  margin-top: 2em;
+  margin-top: 1em;
   font-family: var(--font);
   text-align: center;
   font-size: 1em;

@@ -8,6 +8,8 @@ export default class CountdownTimer {
     this._time = targetDate;
     this._intervalId = null;
     this._isActive = false;
+
+    this.start();
   }
 
   start() {
